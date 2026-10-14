@@ -11,10 +11,6 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -60,7 +56,7 @@
     }
 
     .hero {
-      padding: 90px 0 70px;
+      padding: 80px 0 55px;
     }
 
     .eyebrow {
@@ -69,20 +65,20 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: #2563eb;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     h1 {
       font-size: 48px;
       line-height: 1.1;
-      margin: 0 0 24px;
+      margin: 0;
       color: #111827;
       letter-spacing: -0.03em;
       max-width: 780px;
     }
 
     section {
-      padding: 65px 0;
+      padding: 55px 0;
     }
 
     .section-white {
@@ -90,7 +86,7 @@
     }
 
     h2 {
-      margin: 0 0 18px;
+      margin: 0 0 16px;
       font-size: 30px;
       color: #111827;
       letter-spacing: -0.02em;
@@ -98,30 +94,19 @@
 
     p {
       color: #4b5563;
-      margin-top: 0;
+      margin: 0;
       max-width: 760px;
     }
 
-    .highlight {
-      padding: 26px 30px;
-      background: #eef2ff;
-      border-radius: 10px;
+    .comparison {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
       margin-top: 28px;
     }
 
-    .highlight p {
-      margin: 0;
-      color: #3730a3;
-    }
-
-    .comparison {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 28px;
-  margin-top: 30px;
-}
-
     .example {
+      width: 100%;
       background: #ffffff;
       border: 1px solid #e5e7eb;
       border-radius: 12px;
@@ -137,7 +122,8 @@
     }
 
     .image-placeholder {
-      min-height: 300px;
+      width: 100%;
+      min-height: 280px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -148,11 +134,18 @@
       font-size: 14px;
     }
 
+    .example img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     .closing {
-      margin-top: 32px;
+      margin-top: 30px;
       font-size: 17px;
       font-weight: 600;
       color: #111827;
+      max-width: 760px;
     }
 
     footer {
@@ -160,7 +153,7 @@
       border-top: 1px solid #e5e7eb;
       color: #6b7280;
       font-size: 14px;
-      background: white;
+      background: #ffffff;
     }
 
     @media (max-width: 750px) {
@@ -168,12 +161,12 @@
         font-size: 38px;
       }
 
-      .comparison {
-        grid-template-columns: 1fr;
+      .hero {
+        padding: 60px 0 45px;
       }
 
-      .hero {
-        padding: 65px 0 50px;
+      section {
+        padding: 45px 0;
       }
     }
   </style>
@@ -195,11 +188,9 @@
 
   <section class="hero">
     <div class="container">
-
       <div class="eyebrow">Case Study 01</div>
 
       <h1>From engineering issue to customer-facing documentation</h1>
-
     </div>
   </section>
 
@@ -210,17 +201,10 @@
       <h2>Challenge</h2>
 
       <p>
-        During a technical investigation, developers identified that average
-        transmission power values were being calculated incorrectly because
-        the logarithmic nature of the dBm scale was not taken into account.
-        The resulting software change also affected the meaning and reporting
-        of related performance counters.
-      </p>
-
-      <p>
-        The documentation therefore needed to explain the change accurately
-        without exposing unnecessary implementation details or making the
-        customer-facing description harder to understand.
+        Developers identified that average transmission power values were being
+        calculated incorrectly because the logarithmic nature of the dBm scale
+        was not taken into account. The resulting change also affected how the
+        related performance counters needed to be documented.
       </p>
 
     </div>
@@ -233,21 +217,10 @@
       <h2>My contribution</h2>
 
       <p>
-        I assessed the documentation impact of the engineering findings and
-        worked with the relevant technical stakeholders to understand the
-        change. I then translated the technical information into concise,
-        customer-facing documentation describing the change from dBm to mW
-        and its effect on performance reporting.
+        I translated the engineering findings into concise customer-facing
+        documentation explaining the change from dBm to mW and its impact
+        on performance reporting.
       </p>
-
-      <div class="highlight">
-        <p>
-          I focused the final content on verified system behavior and user
-          impact, presenting the change as a clearer and more useful way to
-          interpret radio performance data.
-        </p>
-      </div>
-
 
     </div>
   </section>
