@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>From Engineering Issue to Customer-Facing Documentation | Bálint Barta</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f8fa;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .name {
+      font-weight: 700;
+      font-size: 18px;
+      color: #111827;
+      text-decoration: none;
+    }
+
+    .back-link {
+      text-decoration: none;
+      color: #4b5563;
+      font-size: 14px;
+    }
+
+    .back-link:hover {
+      color: #111827;
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #2563eb;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 1.1;
+      margin: 0 0 24px;
+      color: #111827;
+      letter-spacing: -0.03em;
+      max-width: 780px;
+    }
+
+    .intro {
+      font-size: 19px;
+      color: #4b5563;
+      max-width: 720px;
+      margin: 0;
+    }
+
+    section {
+      padding: 65px 0;
+    }
+
+    .section-white {
+      background: #ffffff;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 30px;
+      color: #111827;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      color: #4b5563;
+      margin-top: 0;
+      max-width: 760px;
+    }
+
+    .highlight {
+      padding: 26px 30px;
+      background: #eef2ff;
+      border-radius: 10px;
+      margin-top: 28px;
+    }
+
+    .highlight p {
+      margin: 0;
+      color: #3730a3;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .example {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .example-label {
+      padding: 16px 20px;
+      border-bottom: 1px solid #e5e7eb;
+      font-size: 14px;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .image-placeholder {
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      text-align: center;
+      color: #9ca3af;
+      background: #f9fafb;
+      font-size: 14px;
+    }
+
+    .closing {
+      margin-top: 32px;
+      font-size: 17px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .skill {
+      background: #eef2ff;
+      color: #3730a3;
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid #e5e7eb;
+      color: #6b7280;
+      font-size: 14px;
+      background: white;
+    }
+
+    @media (max-width: 750px) {
+      h1 {
+        font-size: 38px;
+      }
+
+      .comparison {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 65px 0 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="name" href="index.html">Bálint Barta</a>
+      <a class="back-link" href="index.html">← Back to portfolio</a>
+    </nav>
+  </div>
+</header>
+
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+
+      <div class="eyebrow">Case Study 01</div>
+
+      <h1>From engineering issue to customer-facing documentation</h1>
+
+      <p class="intro">
+        Translating a technical investigation involving RF power measurements
+        into clear documentation focused on the system change and its practical
+        impact for users.
+      </p>
+
+    </div>
+  </section>
+
+
+  <section class="section-white">
+    <div class="container">
+
+      <h2>Challenge</h2>
+
+      <p>
+        During a technical investigation, developers identified that average
+        transmission power values were being calculated incorrectly because
+        the logarithmic nature of the dBm scale was not taken into account.
+        The resulting software change also affected the meaning and reporting
+        of related performance counters.
+      </p>
+
+      <p>
+        The documentation therefore needed to explain the change accurately
+        without exposing unnecessary implementation details or making the
+        customer-facing description harder to understand.
+      </p>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container">
+
+      <h2>My contribution</h2>
+
+      <p>
+        I assessed the documentation impact of the engineering findings and
+        worked with the relevant technical stakeholders to understand the
+        change. I then translated the technical information into concise,
+        customer-facing documentation describing the change from dBm to mW
+        and its effect on performance reporting.
+      </p>
+
+      <div class="highlight">
+        <p>
+          I focused the final content on verified system behavior and user
+          impact, presenting the change as a clearer and more useful way to
+          interpret radio performance data.
+        </p>
+      </div>
+
+      <div class="skills">
+        <span class="skill">Technical Analysis</span>
+        <span class="skill">Technical Writing</span>
+        <span class="skill">SME Collaboration</span>
+        <span class="skill">5G RAN</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section-white">
+    <div class="container">
+
+      <h2>Before / After</h2>
+
+      <div class="comparison">
+
+        <div class="example">
+          <div class="example-label">Engineering input</div>
+
+          <div class="image-placeholder">
+            An anonymized excerpt of the internal engineering description
+            will be shown here.
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-label">Customer-facing documentation</div>
+
+          <div class="image-placeholder">
+            The final anonymized documentation sample will be shown here.
+          </div>
+        </div>
+
+      </div>
+
+      <p class="closing">
+        The final documentation presents the technical change clearly and
+        focuses on the practical impact for users.
+      </p>
+
+    </div>
+  </section>
+
+</main>
+
+
+<footer>
+  <div class="container">
+    © 2026 Bálint Barta · Technical Writing Portfolio
+  </div>
+</footer>
+
+</body>
+</html>
