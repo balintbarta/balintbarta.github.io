@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bálint Barta | Technical Writer</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f8fa;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .name {
+      font-weight: 700;
+      font-size: 18px;
+      color: #111827;
+      text-decoration: none;
+    }
+
+    nav .links {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav .links a {
+      text-decoration: none;
+      color: #4b5563;
+      font-size: 14px;
+    }
+
+    nav .links a:hover {
+      color: #111827;
+    }
+
+    .hero {
+      padding: 110px 0 90px;
+    }
+
+    .hero-content {
+      max-width: 780px;
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #2563eb;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 54px;
+      line-height: 1.08;
+      margin: 0 0 24px;
+      color: #111827;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #4b5563;
+      max-width: 720px;
+      margin-bottom: 32px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      border-radius: 7px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .button:hover {
+      background: #374151;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-white {
+      background: white;
+    }
+
+    .section-title {
+      margin-bottom: 42px;
+    }
+
+    .section-title h2 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      color: #111827;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: #6b7280;
+      max-width: 700px;
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .case-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 28px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .case-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .case-number {
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .case-card h3 {
+      margin: 0 0 14px;
+      font-size: 20px;
+      color: #111827;
+    }
+
+    .case-card p {
+      margin: 0;
+      color: #6b7280;
+      font-size: 15px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .skill {
+      background: #eef2ff;
+      color: #3730a3;
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .about-grid p {
+      color: #4b5563;
+      margin-top: 0;
+    }
+
+    .fact {
+      margin-bottom: 22px;
+    }
+
+    .fact strong {
+      display: block;
+      color: #111827;
+      margin-bottom: 3px;
+    }
+
+    .fact span {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid #e5e7eb;
+      color: #6b7280;
+      font-size: 14px;
+      background: white;
+    }
+
+    @media (max-width: 800px) {
+      h1 {
+        font-size: 40px;
+      }
+
+      .case-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      nav .links {
+        display: none;
+      }
+
+      .hero {
+        padding: 80px 0 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="name" href="#">Bálint Barta</a>
+
+      <div class="links">
+        <a href="#work">Selected Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="eyebrow">Technical Writer</div>
+
+        <h1>Making complex technology clear.</h1>
+
+        <p>
+          Technical Writer with experience in telecom and 4G/5G RAN documentation.
+          I translate complex engineering information into clear, structured,
+          customer-facing content and collaborate closely with developers and
+          subject matter experts.
+        </p>
+
+        <a class="button" href="#work">View selected work</a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="work" class="section-white">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Selected work</h2>
+        <p>
+          Case studies showing how I analyze technical information,
+          collaborate with subject matter experts, and turn engineering
+          input into usable documentation.
+        </p>
+      </div>
+
+      <div class="case-grid">
+
+        <article class="case-card">
+          <div class="case-number">CASE STUDY 01</div>
+          <h3>From engineering issue to customer-facing documentation</h3>
+          <p>
+            Translating a technical investigation involving RF power
+            measurements into clear documentation focused on system behavior,
+            user impact, and practical benefit.
+          </p>
+        </article>
+
+        <article class="case-card">
+          <div class="case-number">CASE STUDY 02</div>
+          <h3>Correcting inaccurate product documentation</h3>
+          <p>
+            Identifying the documentation impact of incorrect attribute
+            behavior information and communicating the verified behavior
+            clearly to customers.
+          </p>
+        </article>
+
+        <article class="case-card">
+          <div class="case-number">CASE STUDY 03</div>
+          <h3>Simplifying complex technical information</h3>
+          <p>
+            Analyzing complex engineering input for an EN-DC feature,
+            identifying the core decision logic, and restructuring it into
+            concise and readable documentation.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="about">
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div>
+          <div class="section-title">
+            <h2>About me</h2>
+          </div>
+
+          <p>
+            My background is in technical documentation for telecom products,
+            with hands-on experience working with 4G and 5G RAN technologies.
+          </p>
+
+          <p>
+            My work has involved interpreting engineering input, researching
+            technical behavior, resolving documentation inconsistencies,
+            coordinating reviews, and working directly with developers and
+            subject matter experts.
+          </p>
+
+          <div class="skills">
+            <span class="skill">Technical Writing</span>
+            <span class="skill">4G RAN</span>
+            <span class="skill">5G RAN</span>
+            <span class="skill">Technical Research</span>
+            <span class="skill">SME Collaboration</span>
+            <span class="skill">Content Simplification</span>
+            <span class="skill">Documentation Review</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="fact">
+            <strong>Focus</strong>
+            <span>Technical and product documentation</span>
+          </div>
+
+          <div class="fact">
+            <strong>Domain experience</strong>
+            <span>Telecommunications, 4G and 5G RAN</span>
+          </div>
+
+          <div class="fact">
+            <strong>Working style</strong>
+            <span>Research, technical analysis and cross-functional collaboration</span>
+          </div>
+
+          <div class="fact">
+            <strong>Location</strong>
+            <span>Hungary</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="contact" class="section-white">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>
+          Contact information and professional profiles will be added here.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+<footer>
+  <div class="container">
+    © 2026 Bálint Barta · Technical Writing Portfolio
+  </div>
+</footer>
+
+</body>
+</html>
