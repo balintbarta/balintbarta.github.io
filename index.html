@@ -220,6 +220,38 @@
       font-size: 14px;
     }
 
+    .contact-links {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .contact-links a {
+      display: flex;
+      flex-direction: column;
+      padding: 22px;
+      background: #f7f8fa;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .contact-links a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+
+    .contact-links strong {
+      color: #111827;
+      margin-bottom: 4px;
+    }
+
+    .contact-links span {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
     footer {
       padding: 40px 0;
       border-top: 1px solid #e5e7eb;
@@ -240,6 +272,10 @@
       .about-grid {
         grid-template-columns: 1fr;
         gap: 30px;
+      }
+
+      .contact-links {
+        grid-template-columns: 1fr;
       }
 
       nav .links {
@@ -411,8 +447,23 @@
       <div class="section-title">
         <h2>Contact</h2>
         <p>
-          Contact information and professional profiles will be added here.
+          If you would like to discuss a Technical Writer opportunity,
+          feel free to get in touch.
         </p>
+      </div>
+
+      <div class="contact-links">
+
+        <a href="mailto:balintbarta@outlook.com">
+          <strong>Email</strong>
+          <span>balintbarta@outlook.com</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/balintbarta/" target="_blank" rel="noopener noreferrer">
+          <strong>LinkedIn</strong>
+          <span>linkedin.com/in/balintbarta</span>
+        </a>
+
       </div>
 
     </div>
