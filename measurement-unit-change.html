@@ -114,30 +114,31 @@
     }
 
     .example-label {
-      padding: 16px 20px;
+      padding: 15px 20px;
       border-bottom: 1px solid #e5e7eb;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
-      color: #111827;
-    }
-
-    .image-placeholder {
-      width: 100%;
-      min-height: 280px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 30px;
-      text-align: center;
-      color: #9ca3af;
-      background: #f9fafb;
-      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #2563eb;
+      background: #ffffff;
     }
 
     .example img {
-      width: 100%;
-      height: auto;
       display: block;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .example-after {
+      padding-bottom: 24px;
+    }
+
+    .example-after img {
+      max-width: 680px;
+      margin-top: 24px;
     }
 
     .closing {
@@ -168,6 +169,15 @@
       section {
         padding: 45px 0;
       }
+
+      .example-after {
+        padding: 0;
+      }
+
+      .example-after img {
+        max-width: 100%;
+        margin-top: 0;
+      }
     }
   </style>
 </head>
@@ -188,9 +198,11 @@
 
   <section class="hero">
     <div class="container">
+
       <div class="eyebrow">Case Study 01</div>
 
       <h1>From engineering issue to customer-facing documentation</h1>
+
     </div>
   </section>
 
@@ -234,14 +246,23 @@
       <div class="comparison">
 
         <div class="example">
-  <div class="example-label">Engineering input</div>
-  <img src="measurement-unit-engineering-input.png" alt="Anonymized engineering input related to the measurement unit change">
-</div>
+          <div class="example-label">Engineering input</div>
 
-        <div class="example">
-  <div class="example-label">Customer-facing documentation</div>
-  <img src="measurement-unit-customer-facing.png" alt="Anonymized customer-facing documentation showing the final wording">
-</div>
+          <img
+            src="measurement-unit-engineering-input.png"
+            alt="Anonymized engineering input related to the measurement unit change"
+          >
+        </div>
+
+
+        <div class="example example-after">
+          <div class="example-label">Customer-facing documentation</div>
+
+          <img
+            src="measurement-unit-customer-facing.png"
+            alt="Anonymized customer-facing documentation showing the final wording"
+          >
+        </div>
 
       </div>
 
@@ -264,4 +285,3 @@
 
 </body>
 </html>
-
