@@ -146,10 +146,13 @@
     }
 
     .case-card {
+      display: block;
       background: white;
       border: 1px solid #e5e7eb;
       border-radius: 12px;
       padding: 28px;
+      text-decoration: none;
+      color: inherit;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
@@ -344,7 +347,7 @@
 
       <div class="case-grid">
 
-        <article class="case-card">
+        <a class="case-card" href="measurement-unit-change.html">
           <div class="case-number">CASE STUDY 01</div>
           <h3>From engineering issue to customer-facing documentation</h3>
           <p>
@@ -352,7 +355,7 @@
             measurements into clear documentation focused on system behavior,
             user impact, and practical benefit.
           </p>
-        </article>
+        </a>
 
         <article class="case-card">
           <div class="case-number">CASE STUDY 02</div>
